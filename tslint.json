@@ -1,0 +1,44 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+      "tslint-config-standard"
+    ],
+    "jsRules": {
+      "object-curly-spacing": [
+        true,
+        "always"
+      ],
+      "object-literal-shorthand": true
+    },
+    "rules": {
+      "no-parameter-reassignment": true,
+      "curly": true,
+      "no-use-before-declare": false,
+      "object-literal-key-quotes": [
+        true,
+        "as-needed"
+      ],
+      "prefer-const": true,
+      "no-unused-variable": false,
+      "space-before-function-paren": false,
+      "no-floating-promises": false,
+      "whitespace": [
+        true,
+        "check-branch",
+        "check-decl",
+        "check-module",
+        "check-operator",
+        "check-preblock",
+        "check-rest-spread",
+        "check-separator",
+        "check-type",
+        "check-typecast",
+        "check-type-operator"
+      ],
+      "await-promise": [
+        false,
+        "Bluebird"
+      ]
+    },
+    "rulesDirectory": []
+}
