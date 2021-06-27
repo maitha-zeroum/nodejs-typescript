@@ -4,7 +4,6 @@ import cors from 'cors'
 import express from 'express'
 import helmet from 'helmet'
 import methodOverride from 'method-override'
-import { IndexRouter } from '../app/routes/indexRouter'
 
 export class Express {
   public port: number
@@ -23,7 +22,6 @@ export class Express {
     app.use(cors())
     app.use(helmet())
     app.use(compression())
-    app.use(new IndexRouter().r)
     this.app = app
   }
 }

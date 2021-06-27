@@ -8,5 +8,5 @@ serverHttp.listen(express.port, () => {
 })
 
 process.on('beforeExit', () => {
-  console.warn('STOPED', `Express Server finalized!!!`)
+  console.info('STOPED', `Express Server finalized!!!`)
 })
