@@ -59,14 +59,14 @@ git merge --abort
 # Entendendo estrutura do projeto
 
 ```
-./ -> pasta principa
+./ -> pasta principal
 ./tsconfig.json -> arquivo de configurações do typescript https://www.typescriptlang.org/docs/handbook/tsconfig-json.html
 ./tslint.json -> arquivo de configurações do lint https://palantir.github.io/tslint/
 ./jest.config.js -> arquivo de configurações do jest https://jestjs.io/pt-BR/docs/getting-started
 ./.gitignore -> arquivo de configuração para git, lista o que o git deve ignorar no repositório
 ./.editorconfig -> arquivo de configuração do visual studio code para ajustar editor de código com lint
 ./.vscode -> diretório de configurações do vscode
-./.vscode/lauch.json -> arquivo que permite controlar e debugar projeto usando vscode
+./.vscode/launch.json -> arquivo que permite controlar e debugar projeto usando vscode
 ./README.md -> arquivo de texto MD com instruções do projeto
 ./CHANGELOG -> arquivo de controle de versão para informar o que esta sendo alterado de uma versão para outra no código com a evolução do projeto
 ./babel.config.js -> arquivo de configurações do babel para nodejs

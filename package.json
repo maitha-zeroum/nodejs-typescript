@@ -10,10 +10,6 @@
     "test": "jest --no-cache --passWithNoTests",
     "tsc-check": "tsc --noEmit"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/janiel14/base-typescript.git"
-  },
   "keywords": [
     "nodejs",
     "typescript",
@@ -22,10 +18,6 @@
   ],
   "author": "Janiel Oliveira",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/janiel14/base-typescript/issues"
-  },
-  "homepage": "https://github.com/janiel14/base-typescript#readme",
   "devDependencies": {
     "@babel/preset-typescript": "^7.10.4",
     "@types/compression": "^1.7.0",
