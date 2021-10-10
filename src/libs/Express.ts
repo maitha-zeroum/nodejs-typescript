@@ -4,6 +4,8 @@ import cors from 'cors'
 import express from 'express'
 import helmet from 'helmet'
 import methodOverride from 'method-override'
+import * as routers from '../app/routes'
+import { connectMongoDb } from './MongoDb'
 
 export class Express {
   public port: number
@@ -11,7 +13,7 @@ export class Express {
 
   constructor() {
     const app = express()
-    this.port = parseInt(process.env.NODE_PORT, 10) || 8000
+    this.port = process.env.NODE_PORT ? parseInt(process.env.NODE_PORT, 10) : 8000
     app.set('port', this.port)
     app.use(express.static('./public'))
     // tslint:disable-next-line: deprecation
@@ -22,6 +24,11 @@ export class Express {
     app.use(cors())
     app.use(helmet())
     app.use(compression())
+    app.use(new routers.CustomerRouter().r)
+    app.use(new routers.UserRouter().r)
+    app.use(new routers.IndexRouter().r)
+
+    connectMongoDb()
     this.app = app
   }
 }

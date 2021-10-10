@@ -6,7 +6,3 @@ const serverHttp = http.createServer(express.app)
 serverHttp.listen(express.port, () => {
   console.info('START', `Express Server listen: ${express.port}`)
 })
-
-process.on('beforeExit', () => {
-  console.info('STOPED', `Express Server finalized!!!`)
-})
