@@ -1,4 +1,5 @@
 import { Request, Response, Router } from 'express'
+import { JwtSimple } from '../JwtSimple'
 import { Logger } from '../Logger'
 
 export class BaseRouter {
@@ -23,7 +24,7 @@ export class BaseRouter {
           res.status(500).json(error)
         }
       })
-      .get(async (req: Request, res: Response) => {
+      .get(JwtSimple.jwtValidate, async (req: Request, res: Response) => {
         try {
           Logger.info(`${this.name}_GET_BEGIN`, 'request begin', req.body)
           const response = await this.controller.getAll(req)
